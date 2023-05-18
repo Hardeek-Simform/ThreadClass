@@ -2,20 +2,22 @@ package com.practical.thread;
 
 public class CarActivites extends Thread {
     private String activityName;
+    private int requiredTime;
 
-    public CarActivites(String activityName) {
+    public CarActivites(String activityName, int requiredTime) {
         this.activityName = activityName;
+        this.requiredTime = requiredTime;
     }
 
     @Override
     public void run() {
         System.out.println(currentThread().getName() + ":-Currently " + activityName + " has started");
-        for (int i = 0; i < 3; i++) {
-            System.out.println(currentThread().getName() + ":-executing " + activityName + " , execution time in seconds:" + i);
+        while ( requiredTime >= 0) {
             try {
+                requiredTime--;
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
-                e.printStackTrace();
+                throw new RuntimeException(e);
             }
         }
         System.out.println(currentThread().getName() + ":-" + activityName + " : task completed");

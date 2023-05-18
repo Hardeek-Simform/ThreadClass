@@ -12,7 +12,7 @@ public class CarActivites extends Thread {
     @Override
     public void run() {
         System.out.println(currentThread().getName() + ":-Currently " + activityName + " has started");
-        while ( requiredTime >= 0) {
+        while (requiredTime >= 0) {
             try {
                 requiredTime--;
                 Thread.sleep(1000);

@@ -1,16 +1,16 @@
 package com.practical;
 
-import com.practical.thread.CarActivites;
+import com.practical.thread.CarActivities;
 
 public class Main {
     public static void main(String[] args) {
-        CarActivites headlight = new CarActivites("Head Light", 1);
+        CarActivities headlight = new CarActivities("Head Light", 1);
         headlight.start();
-        CarActivites musicSystem = new CarActivites("Music System", 5);
+        CarActivities musicSystem = new CarActivities("Music System", 5);
         musicSystem.start();
-        CarActivites indicator = new CarActivites("Indicator", 1);
+        CarActivities indicator = new CarActivities("Indicator", 1);
         indicator.start();
-        CarActivites wiper = new CarActivites("wiper", 3);
+        CarActivities wiper = new CarActivities("wiper", 3);
         wiper.start();
     }
 }

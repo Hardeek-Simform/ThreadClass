@@ -1,10 +1,10 @@
 package com.practical.thread;
 
-public class CarActivites extends Thread {
+public class CarActivities extends Thread {
     private String activityName;
     private int requiredTime;
 
-    public CarActivites(String activityName, int requiredTime) {
+    public CarActivities(String activityName, int requiredTime) {
         this.activityName = activityName;
         this.requiredTime = requiredTime;
     }
